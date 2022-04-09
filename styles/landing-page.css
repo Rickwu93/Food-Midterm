@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #F5F5F5;
+  font-family: sans-serif;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  height: 10%;
+  width: 100%;
+  background-color: #FB6100;
+  border-bottom: solid #AAA 1px;
+}
+
+header h1 {
+  color: #EEE;
+  font-size: 6.5vh;
+  margin: 1% 0 0 55%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  background-color: #72A101;
+  width: 45%;
+  height: 82%;
+  margin: 7% 0 0 15%;
+}
+
+.orders-bar {
+  display: flex;
+  width: 15%; 
+  height: 82%;
+  background-color: #95CF0E;
+  margin: 7% 1% 0 0;
+}
+
+/* #72A101 */
