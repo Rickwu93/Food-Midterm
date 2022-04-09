@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #F5F5F5;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  border-bottom: solid #AAA 1px;
+  background-color: #FB6100;
+
+}
+
+header h1 {
+  color: #EEE;
+  font-size: 4rem;
+  margin: 1.75rem 0 0 55%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* #72A101 */
