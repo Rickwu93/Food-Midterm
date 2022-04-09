@@ -11,25 +11,41 @@ body {
 }
 
 header {
+  position: fixed;
   display: flex;
   height: 10%;
   width: 100%;
-  border-bottom: solid #AAA 1px;
   background-color: #FB6100;
-
+  border-bottom: solid #AAA 1px;
 }
 
 header h1 {
   color: #EEE;
-  font-size: 4rem;
-  margin: 1.75rem 0 0 55%;
+  font-size: 6.5vh;
+  margin: 1% 0 0 55%;
 }
 
 main {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
+.menu {
+  display: flex;
+  background-color: #72A101;
+  width: 45%;
+  height: 82%;
+  margin: 7% 0 0 15%;
+}
 
+.orders-bar {
+  display: flex;
+  width: 15%; 
+  height: 82%;
+  background-color: #95CF0E;
+  margin: 7% 1% 0 0;
+}
 
 /* #72A101 */
