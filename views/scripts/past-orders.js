@@ -17,23 +17,37 @@ const ordersObj = {
   ]
 }
 
+/* When "PAST ORDERS" in the header is clicked the menu is cleared and past
+orders are displayed */
 
 pastOrdersBtn.addEventListener('click', () => {
   // Clear menu items
   menuArea.innerHTML = '';
 
-  let pastOrdersDiv = document.createElement('div');
-  pastOrdersDiv.classList.add('past-orders');
+  // Generate HTML for customer's past orders to be displayed in menu area
 
-  let pastOrdersTitle = document.createElement('h3');
+  const pastOrdersDiv = document.createElement('div');
+  pastOrdersDiv.classList.add('past-orders_display');
+
+  const pastOrdersTitle = document.createElement('h3');
   pastOrdersTitle.textContent = `Past orders for: ${ordersObj.customerName}`;
-
+  
   // List that will display the past orders
-  let displayOrders = document.createElement('ul');
 
+  const displayOrders = document.createElement('ul');
+  const titleBar = document.createElement('li');
+  titleBar.classList.add('past-orders_titlebar');
+
+  titleBar.innerHTML = `
+    <span>Dish:</span>
+    <span>Qty:</span>
+    <span>Special Instructions:</span>
+  `;
+  displayOrders.append(titleBar);
+  
   for (let order of ordersObj.orders) {
     let displayOrder = document.createElement('li');
-    console.log('DISPLAYORDER: ', displayOrder);
+    displayOrder.classList.add('past-order-li');
 
     let orderDetails = `
       <span>
@@ -55,3 +69,4 @@ pastOrdersBtn.addEventListener('click', () => {
   pastOrdersDiv.append(displayOrders);
   menuArea.append(pastOrdersDiv);
 });
+
