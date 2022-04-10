@@ -8,6 +8,7 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 .wrapper{
+overflow: scroll;
 width:2000px;
 height: 2000px;
 margin:100px auto;
@@ -40,6 +41,9 @@ left:50%;
 transform:translateX(-50%);
 }
 .menu{
+
+max-height: 750px;
+overflow: auto;
 display:flex;
 flex-wrap:wrap;
 justify-content:space-between;
