@@ -1,34 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Home Page</title>
 
-<head>
-  <title>Home Page</title>
-
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/main.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
-  <!-- <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-  <script type="text/javascript" src="/scripts/app.js"></script> -->
-</head>
-
-<body>
-  <header>
-    <h1>REL</h1>
-    <nav>
-
-    </nav>
-  </header>
-
-  <main>
-    <div class="menu">
-  
-    </div>
-  </main>
-  <footer>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/landing-page.css" type="text/css" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     
-  </footer>
-</body>
+    <!-- <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+      <scrip type="text/javascript" src="/scripts/app.js"></script> -->
+        
+        <!-- Google Font - Lobster -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
+        rel="stylesheet"
+        />
+        
+    <!-- App css -->
+    <link rel="stylesheet" href="/styles/landing-page.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/menu.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/past-orders.css" type="text/css">
 
+    <!-- JavaScript -->
+    <script src="./scripts/DOMobjects.js" defer></script>
+    <script src="./scripts/databaseObjects.js" defer></script>
+    <script src="./scripts/functions.js" defer></script>  
+    <script src="./scripts/index.js" defer></script>  
+    <script src="./scripts/past-orders.js" defer></script>
+    <script src="./scripts/generate-menu.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+      </nav>
+      <div class="past-orders">
+        <input type="button" value="PAST ORDERS">
+      </div>
+      <div class="display-menu">
+        <input type="button" value="MENU">
+      </div>
+      <h1>ERLs</h1>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="title">
+          <h4><span>Italian Vietnamese Fusion</span>our menu</h4>
+        </div>
+        <div class="menu">
+          
+        </div>
+          </div>
+        </div>
+      </div>
+  <div class="orders-bar">
+<h2>Your order:</h2>
+  </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
