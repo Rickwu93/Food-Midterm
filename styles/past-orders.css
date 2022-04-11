@@ -1,0 +1,17 @@
+.past-orders_display {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul {
+  width: 100%;
+}
+
+.past-order_li {
+  display: flex;
+  justify-content: center;
+}
