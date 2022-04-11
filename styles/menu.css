@@ -41,7 +41,7 @@ body {
   transform: translateX(-50%);
 }
 .menu {
-  max-height: 5000px;
+  max-height: 50%;
   width: 80%;
   overflow: auto;
   display: flex;

@@ -26,7 +26,7 @@ const populateMenu = function(obj) {
 };
 
 // Displays the user's past orders in the menu-area
-const populatePastOrders = function(obj) {
+const populatePastOrders = function(pastOrdersObj) {
   menuArea.innerHTML = '';
 
   // Generate HTML for customer's past orders to be displayed in menu area
@@ -35,7 +35,7 @@ const populatePastOrders = function(obj) {
   pastOrdersDiv.classList.add('past-orders_display');
 
   const pastOrdersTitle = document.createElement('h3');
-  pastOrdersTitle.textContent = `Past orders for: ${obj.customerName}`;
+  pastOrdersTitle.textContent = `Past orders for: ${pastOrdersObj.customerName}`;
   
   // List that will display the past orders
 
@@ -51,7 +51,7 @@ const populatePastOrders = function(obj) {
   `;
   displayOrders.append(titleBar);
   
-  for (let order of obj.orders) {
+  for (let order of pastOrdersObj.orders) {
     let displayOrder = document.createElement('li');
     displayOrder.classList.add('past-order_li');
 
@@ -84,7 +84,13 @@ const checkForLoggedIn = function() {
 };
 
 // Display logged in as: *[user]email* in the top left of header bar
-const displayLoggedInEmail = function(obj) {
-  const loggedInDiv = document.createElement(div);
+const displayLoggedInEmail = function(userInfoObj) {
+  const loggedInDiv = document.createElement('div');
   loggedInDiv.classList.add('logged-in');
+  
+  const userEmailDisplay = document.createElement('span');
+  userEmailDisplay.textContent = `Logged in as: ${userInfoObj.email}`;
+  
+  loggedInDiv.append(userEmailDisplay);
+  headerBar.append(loggedInDiv);
 }

@@ -58,7 +58,7 @@ const userInfoObj = {
 
 // Used with the populatePastOrders function to display the user's past orders
 const pastOrdersObj = {
-  customerName: userInfo.name,
+  customerName: userInfoObj.name,
   orders: [
     {
       dish: 'House Special Pho',
