@@ -42,10 +42,17 @@ main {
 
 .orders-bar {
   display: flex;
-  width: 15%; 
+  width: 15%;
   height: 82%;
   background-color: #95CF0E;
   margin: 7% 1% 0 0;
 }
 
-/* #72A101 */
+.orders-bar > h2 {
+  display: flex;
+  border-bottom: 3px solid black;
+  font-weight: bold;
+  color: rgb(29, 27, 27);
+  height: 5%;
+  width: 100%;
+}
