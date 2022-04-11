@@ -11,7 +11,7 @@ ul {
   width: 100%;
 }
 
-.past-order-li {
+.past-order_li {
   display: flex;
-  justify-content: space-around; 
+  justify-content: center;
 }

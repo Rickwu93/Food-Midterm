@@ -13,12 +13,16 @@ const ordersObj = {
       dish: 'Pho Lasagna',
       quantity: 2,
       specialInstructions: ''
+    },
+    {
+      dish: 'Italian Special',
+      quantity: 2,
+      specialInstructions: 'Extra special please.'
     }
   ]
 }
 
-/* When "PAST ORDERS" in the header is clicked the menu is cleared and past
-orders are displayed */
+/* When "PAST ORDERS" button in the header is clicked the menu is cleared and past orders are displayed */
 
 pastOrdersBtn.addEventListener('click', () => {
   // Clear menu items
@@ -37,6 +41,7 @@ pastOrdersBtn.addEventListener('click', () => {
   const displayOrders = document.createElement('ul');
   const titleBar = document.createElement('li');
   titleBar.classList.add('past-orders_titlebar');
+  titleBar.classList.add('past-order_li');
 
   titleBar.innerHTML = `
     <span>Dish:</span>
@@ -47,7 +52,9 @@ pastOrdersBtn.addEventListener('click', () => {
   
   for (let order of ordersObj.orders) {
     let displayOrder = document.createElement('li');
-    displayOrder.classList.add('past-order-li');
+    displayOrder.classList.add('past-order_li');
+
+    if (order.specialInstructions === '') order.specialInstructions = 'none';
 
     let orderDetails = `
       <span>
