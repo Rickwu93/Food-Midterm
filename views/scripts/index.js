@@ -2,9 +2,12 @@
 populateMenu(menuContentObj);
 
 // Re-populate menu area when "MENU" button clicked in header
-const menuBtn = document.querySelector('.display-menu');
-console.log('menuBtn: ', menuBtn);
 menuBtn.addEventListener('click', () => {
   menuArea.innerHTML = '';
   populateMenu(menuContentObj);
+});
+
+// Display past-orders in the menu area when PAST ORDERS button clicked
+pastOrdersBtn.addEventListener('click', () => {
+  populatePastOrders(pastOrdersObj);
 });
