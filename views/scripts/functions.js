@@ -77,3 +77,14 @@ const populatePastOrders = function(obj) {
   pastOrdersDiv.append(displayOrders);
   menuArea.append(pastOrdersDiv);
 }
+
+// Returns true if user is logged in
+const checkForLoggedIn = function() {
+  return true;
+};
+
+// Display logged in as: *[user]email* in the top left of header bar
+const displayLoggedInEmail = function(obj) {
+  const loggedInDiv = document.createElement(div);
+  loggedInDiv.classList.add('logged-in');
+}

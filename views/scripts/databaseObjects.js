@@ -50,9 +50,15 @@ const menuContentObj = [
   },
 ];
 
+
+const userInfoObj = {
+  email: 'user@email.com',
+  name: 'First Last'
+}
+
 // Used with the populatePastOrders function to display the user's past orders
 const pastOrdersObj = {
-  customerName: 'First Last',
+  customerName: userInfo.name,
   orders: [
     {
       dish: 'House Special Pho',
@@ -70,4 +76,4 @@ const pastOrdersObj = {
       specialInstructions: 'Extra special please.'
     }
   ]
-}
+};
