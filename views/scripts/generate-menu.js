@@ -1,55 +1,55 @@
-// menuArea already declared in past-orders.js
+// // menuArea already declared in past-orders.js
 
-const menuContent = [
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Italian Special",
-    price: "$15",
-    caption: "mama mia",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
-    price: "$15",
-    caption: "Fusion!",
-  },
-];
+// const menuContent = [
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Italian Special",
+//     price: "$15",
+//     caption: "mama mia",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+//   {
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+//     name: "Pho Lasagna",
+//     price: "$15",
+//     caption: "Fusion!",
+//   },
+// ];
 
 for (let menuItem of menuContent) {
 

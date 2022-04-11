@@ -1,6 +1,3 @@
-const pastOrdersBtn = document.querySelector('.past-orders');
-const menuArea = document.querySelector('.menu');
-
 const ordersObj = {
   customerName: 'First Last',
   orders: [
