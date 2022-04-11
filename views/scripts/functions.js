@@ -7,7 +7,7 @@ const populateMenu = function(obj) {
   
     let menuItemHTML = `
       <div class="image-container">
-        <img src="${menuItem.img} alt="picture of ${menuItem.name}"/>
+        <img src="${menuItem.img}" alt="picture of ${menuItem.name}"/>
       </div>
       <div class="menu-content">
         <h4>${menuItem.name}<span>${menuItem.price}<span></h4>
