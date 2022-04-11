@@ -6,7 +6,7 @@ body {
 body {
   display: flex;
   height: 100vh;
-  background-color: #F5F5F5;
+  background-color: #5a5555;
   font-family: sans-serif;
 }
 
@@ -44,15 +44,44 @@ main {
   display: flex;
   width: 15%;
   height: 82%;
-  background-color: #95CF0E;
+  background-color: #424e6f;
   margin: 7% 1% 0 0;
+  flex-direction: column;
 }
 
 .orders-bar > h2 {
   display: flex;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(197, 182, 182);
   font-weight: bold;
-  color: rgb(29, 27, 27);
+  color: white;
   height: 5%;
-  width: 100%;
+  text-align: center;
+  padding-left: 1em;
+}
+
+.orders-bar h3 {
+  display: flex;
+  border-bottom: 3px solid rgb(197, 182, 182);
+  font-weight: bold;
+  color: white;
+  height: 5%;
+  padding-left: 1em;
+}
+
+.cart-container div {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-top: 5px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.order-total {
+  display: flex;
+  padding-top: 5em;
+  justify-content: space-between;
+  border-top: rgb(197, 182, 182);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
