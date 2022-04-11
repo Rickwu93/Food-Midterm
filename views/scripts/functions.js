@@ -87,10 +87,26 @@ const checkForLoggedIn = function() {
 const displayLoggedInEmail = function(userInfoObj) {
   const loggedInDiv = document.createElement('div');
   loggedInDiv.classList.add('logged-in');
-  
+
   const userEmailDisplay = document.createElement('span');
   userEmailDisplay.textContent = `Logged in as: ${userInfoObj.email}`;
   
   loggedInDiv.append(userEmailDisplay);
   headerBar.append(loggedInDiv);
+}
+
+// Add menu item to cart
+const addToCart = function(item, price) {
+  const orderItem = document.createElement('div');
+  
+  const itemName = document.createElement('div');
+  itemName.textContent = item;
+  
+  const itemPrice = document.createElement('div');
+  itemPrice.textContent = price;
+
+  orderItem.append(itemName);
+  orderItem.append(itemPrice);
+
+  cartContainer.append(orderItem);
 }

@@ -9,3 +9,5 @@ const menuArea = document.querySelector('.menu');
 
 const loggedIn = document.querySelector('.logged-in');
 
+const cartContainer = document.querySelector('.cart-container');
+
