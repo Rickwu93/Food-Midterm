@@ -13,6 +13,7 @@ header {
   width: 100%;
   background-color: #FB6100;
   border-bottom: 1px solid rgb(11, 11, 11);
+  z-index: 3;
 }
 
 header h1 {
@@ -26,4 +27,13 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.menu:-webkit-scrollbar:-webkit-scrollbar {
+  background: transparent;
+}
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background: transparent;
 }
