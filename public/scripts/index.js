@@ -1,3 +1,5 @@
+
+
 // Add menu-items to menu area on page load
 populateMenu(menuContentObj);
 
@@ -11,3 +13,8 @@ menuBtn.addEventListener('click', () => {
 pastOrdersBtn.addEventListener('click', () => {
   populatePastOrders(pastOrdersObj);
 });
+
+// If user is logged in display message
+if (checkForLoggedIn(userInfoObj)) {
+  displayLoggedInEmail(userInfoObj);
+};
