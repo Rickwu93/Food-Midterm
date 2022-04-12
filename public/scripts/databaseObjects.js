@@ -3,56 +3,56 @@ const menuItemsObj = [
   {
     item_url: '/public/docs/food-images/italian3.jpeg',
     name: "Italian Special",
-    price: "$15",
+    price: "15",
     food_description: "mama mia",
     id: 1
   },
   {
     item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
-    price: "$15",
+    price: "15",
     food_description: "Fusion!",
     id: 2
   },
   {
     item_url: '/public/docs/food-images/italian3.jpeg',
     name: "Italian Special",
-    price: "$15",
+    price: "15",
     food_description: "mama mia",
     id: 1
   },
   {
     item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
-    price: "$15",
+    price: "15",
     food_description: "Fusion!",
     id: 2
   },
   {
     item_url: '/public/docs/food-images/italian3.jpeg',
     name: "Italian Special",
-    price: "$15",
+    price: "15",
     food_description: "mama mia",
     id: 1
   },
   {
     item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
-    price: "$15",
+    price: "15",
     food_description: "Fusion!",
     id: 2
   },
   {
     item_url: '/public/docs/food-images/italian3.jpeg',
     name: "Italian Special",
-    price: "$15",
+    price: "15",
     food_description: "mama mia",
     id: 1
   },
   {
     item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
-    price: "$15",
+    price: "15",
     food_description: "Fusion!",
     id: 2
   }

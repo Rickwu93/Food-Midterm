@@ -21,7 +21,7 @@ const populateMenu = function(menuItemsObj) {
         <img src="${menuItem.item_url}" alt="picture of ${menuItem.name}"/>
       </div>
       <div class="menu-content">
-        <h4>${menuItem.name}<span>${menuItem.price}<span></h4>
+        <h4>${menuItem.name}<span>$${menuItem.price}<span></h4>
         <p>${menuItem.food_description}</p>
         </div>
       <div style="width: 10%"></div>
@@ -119,14 +119,38 @@ const addToCart = function(menuItemId, menuItemsObj) {
   // Create HTML element to append to cart area
   const orderItem = document.createElement('div');
   
-  const itemName = document.createElement('div');
+  const itemName = document.createElement('p');
   itemName.textContent = itemToCart.name;
    
-  const itemPrice = document.createElement('div');
-  itemPrice.textContent = itemToCart.price;
+  const itemPrice = document.createElement('p');
+  itemPrice.classList.add('item-price_cart');
+  itemPrice.setAttribute('data', itemToCart.id);
+  itemPrice.textContent = `$${itemToCart.price}`;
 
   orderItem.append(itemName);
   orderItem.append(itemPrice);
 
   cartContainer.append(orderItem);
+}
+
+// Update order total in cart area
+const updateOrderTotal = function(menuItemsObj) {
+  let total = 0;
+  const orderedItems = document.querySelectorAll('.item-price_cart');
+  let prices = [];
+  
+  for (let item of orderedItems) {
+    let itemId = item.getAttribute('data');
+
+    for (let menuItem of menuItemsObj) {
+      if (menuItem.id == itemId) {
+        total += Number(menuItem.price);
+        break; // Stops duplicate items from being added, won't need with database
+      }
+    } 
+  }
+  // Could send the order total to the database at this point too
+
+  orderTotalDisplay.textContent = '';
+  orderTotalDisplay.textContent = `$${total}`;
 }

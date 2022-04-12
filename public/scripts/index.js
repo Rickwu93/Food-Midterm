@@ -21,6 +21,17 @@ if (checkForLoggedIn(userInfoObj)) {
   displayLoggedInEmail(userInfoObj);
 };
 
+// Update the order total in the cart area
 
+// Update total if item is added
+cartContainer.addEventListener('DOMNodeInserted', () => {
+  console.log('order change');
+  updateOrderTotal(menuItemsObj);
+});
+// Update total if item is removed.
+cartContainer.addEventListener('DOMNodeInserted', () => {
+  console.log('order change');
+  updateOrderTotal(menuItemsObj);
+});
 
 
