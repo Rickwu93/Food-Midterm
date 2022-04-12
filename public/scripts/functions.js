@@ -137,16 +137,20 @@ const addToCart = function(menuItemId, menuItemsObj) {
 const updateOrderTotal = function(menuItemsObj) {
   let total = 0;
   const orderedItems = document.querySelectorAll('.item-price_cart');
+  let prices = [];
   
   for (let item of orderedItems) {
     let itemId = item.getAttribute('data');
 
     for (let menuItem of menuItemsObj) {
       if (menuItem.id == itemId) {
-        total += menuItem.price;
+        total += Number(menuItem.price);
+        break; // Stops duplicate items from being added, won't need with database
       }
     } 
   }
+  // Could send the order total to the database at this point too
+
   orderTotalDisplay.textContent = '';
   orderTotalDisplay.textContent = `$${total}`;
 }
