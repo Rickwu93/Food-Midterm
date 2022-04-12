@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #5a5555;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  height: 10%;
+  width: 100%;
+  background-color: #FB6100;
+  border-bottom: 1px solid rgb(11, 11, 11);
+}
+
+header h1 {
+  color: #EEE;
+  font-size: 6.5vh;
+  margin: 1% 0 0 55%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
