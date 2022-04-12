@@ -1,5 +1,4 @@
 const headerBar = document.querySelector('header');
-console.log('headerBar: ', headerBar);
 
 const pastOrdersBtn = document.querySelector('.past-orders');
 
