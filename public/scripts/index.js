@@ -1,15 +1,14 @@
-
-
 // Add menu-items to menu area on page load
-populateMenu(menuContentObj);
+populateMenu(menuItemsObj);
 
-// Add listeners to menu buttons after they've been generated
-const addToCartBtns = document.querySelectorAll('.button-container');
+// Add listeners to menu buttons after buttons are generated
+addButtonListeners();
 
 // Re-populate menu area when "MENU" button clicked in header
 menuBtn.addEventListener('click', () => {
   menuArea.innerHTML = '';
-  populateMenu(menuContentObj);
+  populateMenu(menuItemsObj);
+  addButtonListeners();
 });
 
 // Display past-orders in the menu area when PAST ORDERS button clicked
@@ -22,11 +21,6 @@ if (checkForLoggedIn(userInfoObj)) {
   displayLoggedInEmail(userInfoObj);
 };
 
-// Add menu items to checkout area
-addToCartBtns.forEach(button => {
-  button.addEventListener('click', (e) => {
-    console.log(e.target.parentNode.parentNode);
-  });
-});
+
 
 

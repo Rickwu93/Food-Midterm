@@ -1,55 +1,62 @@
 // Used for with "populateMenu" function for populating the menu div
-const menuContentObj = [
+const menuItemsObj = [
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+    item_url: '/public/docs/food-images/italian3.jpeg',
     name: "Italian Special",
     price: "$15",
-    caption: "mama mia",
+    food_description: "mama mia",
+    id: 1
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+    item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "Fusion!",
+    id: 2
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
+    item_url: '/public/docs/food-images/italian3.jpeg',
+    name: "Italian Special",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "mama mia",
+    id: 1
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+    item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "Fusion!",
+    id: 2
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
+    item_url: '/public/docs/food-images/italian3.jpeg',
+    name: "Italian Special",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "mama mia",
+    id: 1
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+    item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "Fusion!",
+    id: 2
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
-    name: "Pho Lasagna",
+    item_url: '/public/docs/food-images/italian3.jpeg',
+    name: "Italian Special",
     price: "$15",
-    caption: "Fusion!",
+    food_description: "mama mia",
+    id: 1
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIKjlrsxzNTgZ_ocm-hjeJuFtVL3Ug1asjw&usqp=CAU",
+    item_url: '/public/docs/food-images/italian1.jpeg',
     name: "Pho Lasagna",
     price: "$15",
-    caption: "Fusion!",
-  },
+    food_description: "Fusion!",
+    id: 2
+  }
 ];
-
 
 const userInfoObj = {
   email: 'user@email.com',
