@@ -1,3 +1,5 @@
+
+
 // Add menu-items to menu area on page load
 populateMenu(menuContentObj);
 
@@ -26,3 +28,5 @@ addToCartBtns.forEach(button => {
     console.log(e.target.parentNode.parentNode);
   });
 });
+
+

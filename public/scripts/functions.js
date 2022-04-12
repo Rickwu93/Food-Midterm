@@ -93,6 +93,7 @@ const displayLoggedInEmail = function(userInfoObj) {
   
   loggedInDiv.append(userEmailDisplay);
   headerBar.append(loggedInDiv);
+
 }
 
 // Add menu item to cart
