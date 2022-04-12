@@ -1,21 +1,32 @@
+// Create event listeners for the ADD TO CART buttons
+const addButtonListeners = function() {
+  const addToCartBtns = document.querySelectorAll('.add-to_cart');
+  addToCartBtns.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const menuItemId = e.target.getAttribute('data');
+      addToCart(menuItemId, menuItemsObj);
+    });
+  });
+}
+
 // Fills the menu div html for the menu-items
-const populateMenu = function(obj) {
-  for (let menuItem of obj) {
+const populateMenu = function(menuItemsObj) {
+  for (let menuItem of menuItemsObj) {
 
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
   
     let menuItemHTML = `
       <div class="image-container">
-        <img src="${menuItem.img}" alt="picture of ${menuItem.name}"/>
+        <img src="${menuItem.item_url}" alt="picture of ${menuItem.name}"/>
       </div>
       <div class="menu-content">
         <h4>${menuItem.name}<span>${menuItem.price}<span></h4>
-        <p>${menuItem.caption}</p>
+        <p>${menuItem.food_description}</p>
         </div>
       <div style="width: 10%"></div>
       <div class="button-container">
-        <button>Add To Cart</button>
+        <button data="${menuItem.id}" class="add-to_cart">Add To Cart</button>
       </div>
     
     `;
@@ -26,7 +37,7 @@ const populateMenu = function(obj) {
 };
 
 // Displays the user's past orders in the menu-area
-const populatePastOrders = function(obj) {
+const populatePastOrders = function(pastOrdersObj) {
   menuArea.innerHTML = '';
 
   // Generate HTML for customer's past orders to be displayed in menu area
@@ -35,7 +46,7 @@ const populatePastOrders = function(obj) {
   pastOrdersDiv.classList.add('past-orders_display');
 
   const pastOrdersTitle = document.createElement('h3');
-  pastOrdersTitle.textContent = `Past orders for: ${obj.customerName}`;
+  pastOrdersTitle.textContent = `Past orders for: ${pastOrdersObj.customerName}`;
   
   // List that will display the past orders
 
@@ -51,7 +62,7 @@ const populatePastOrders = function(obj) {
   `;
   displayOrders.append(titleBar);
   
-  for (let order of obj.orders) {
+  for (let order of pastOrdersObj.orders) {
     let displayOrder = document.createElement('li');
     displayOrder.classList.add('past-order_li');
 
@@ -76,4 +87,46 @@ const populatePastOrders = function(obj) {
   pastOrdersDiv.append(pastOrdersTitle);
   pastOrdersDiv.append(displayOrders);
   menuArea.append(pastOrdersDiv);
+}
+
+// Returns true if user is logged in
+const checkForLoggedIn = function() {
+  return true;
+};
+
+// Display logged in as: *[user]email* in the top left of header bar
+const displayLoggedInEmail = function(userInfoObj) {
+  const loggedInDiv = document.createElement('div');
+  loggedInDiv.classList.add('logged-in');
+
+  const userEmailDisplay = document.createElement('span');
+  userEmailDisplay.textContent = `Logged in as: ${userInfoObj.email}`;
+  
+  loggedInDiv.append(userEmailDisplay);
+  headerBar.append(loggedInDiv);
+
+}
+
+// Add menu item to cart
+const addToCart = function(menuItemId, menuItemsObj) {
+  let itemToCart;
+
+  // Find item from menu database that matches id from parameter
+  menuItemsObj.forEach(menuItem => {
+    if (menuItem.id == menuItemId) itemToCart = menuItem;
+  });
+
+  // Create HTML element to append to cart area
+  const orderItem = document.createElement('div');
+  
+  const itemName = document.createElement('div');
+  itemName.textContent = itemToCart.name;
+   
+  const itemPrice = document.createElement('div');
+  itemPrice.textContent = itemToCart.price;
+
+  orderItem.append(itemName);
+  orderItem.append(itemPrice);
+
+  cartContainer.append(orderItem);
 }
