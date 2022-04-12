@@ -1,21 +1,32 @@
+// Create event listeners for the ADD TO CART buttons
+const addButtonListeners = function() {
+  const addToCartBtns = document.querySelectorAll('.add-to_cart');
+  addToCartBtns.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const menuItemId = e.target.getAttribute('data');
+      addToCart(menuItemId, menuItemsObj);
+    });
+  });
+}
+
 // Fills the menu div html for the menu-items
-const populateMenu = function(obj) {
-  for (let menuItem of obj) {
+const populateMenu = function(menuItemsObj) {
+  for (let menuItem of menuItemsObj) {
 
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
   
     let menuItemHTML = `
       <div class="image-container">
-        <img src="${menuItem.img}" alt="picture of ${menuItem.name}"/>
+        <img src="${menuItem.item_url}" alt="picture of ${menuItem.name}"/>
       </div>
       <div class="menu-content">
         <h4>${menuItem.name}<span>${menuItem.price}<span></h4>
-        <p>${menuItem.caption}</p>
+        <p>${menuItem.food_description}</p>
         </div>
       <div style="width: 10%"></div>
       <div class="button-container">
-        <button>Add To Cart</button>
+        <button data="${menuItem.id}" class="add-to_cart">Add To Cart</button>
       </div>
     
     `;
@@ -97,14 +108,22 @@ const displayLoggedInEmail = function(userInfoObj) {
 }
 
 // Add menu item to cart
-const addToCart = function(item, price) {
+const addToCart = function(menuItemId, menuItemsObj) {
+  let itemToCart;
+
+  // Find item from menu database that matches id from parameter
+  menuItemsObj.forEach(menuItem => {
+    if (menuItem.id == menuItemId) itemToCart = menuItem;
+  });
+
+  // Create HTML element to append to cart area
   const orderItem = document.createElement('div');
   
   const itemName = document.createElement('div');
-  itemName.textContent = item;
-  
+  itemName.textContent = itemToCart.name;
+   
   const itemPrice = document.createElement('div');
-  itemPrice.textContent = price;
+  itemPrice.textContent = itemToCart.price;
 
   orderItem.append(itemName);
   orderItem.append(itemPrice);
