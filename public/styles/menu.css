@@ -1,5 +1,6 @@
 .wrapper {
   width: 120em;
+  background-image: url('../../docs/food-images/background-image.jpg')
 }
 
 .title {
