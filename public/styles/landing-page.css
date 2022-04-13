@@ -16,11 +16,13 @@ header {
   background-color: #FB6100;
   border-bottom: 1px solid rgb(11, 11, 11);
   z-index: 3;
-
+  flex-direction: row-reverse;
 }
 
 .logo {
-  width: 150px;
+  width: 10em;
+  display: flex;
+  order: 2;
 }
 
 
