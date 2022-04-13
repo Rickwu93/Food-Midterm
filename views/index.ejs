@@ -22,36 +22,50 @@
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
         rel="stylesheet"
         />
+        <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- App css -->
     <link rel="stylesheet" href="styles/landing-page.css" type="text/css" />
     <link rel="stylesheet" href="styles/menu.css" type="text/css" />
     <link rel="stylesheet" href="styles/past-orders.css" type="text/css">
     <link rel="stylesheet" href="styles/cart.css" type="text/css">
+    <link rel="stylesheet" href="styles/quantity-button.css" />
 
     <!-- JavaScript -->
     <script src="./scripts/DOMobjects.js" defer></script>
     <script src="./scripts/databaseObjects.js" defer></script>
     <script src="./scripts/functions.js" defer></script>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/script.js"></script>
   </head>
   <body>
     <header>
-      <nav>
-      </nav>
-      <div class="past-orders">
-        <input type="button" value="PAST ORDERS">
+      <!-- <nav>
+      </nav> -->
+      <div class='button-container'>
+        <div class="past-orders">
+          <input type="button" value="PAST ORDERS">
+        </div>
+        <div class="display-menu">
+          <input type="button" value="MENU">
+        </div>
       </div>
-      <div class="display-menu">
-        <input type="button" value="MENU">
-      </div>
-      <h1>ERLs</h1>
+      <!-- <h1>ERLs</h1> -->
+      <img alt="logo" class="logo" src='../../docs/food-images/ERLs transparent.png'/>
     </header>
     <main>
       <div class="wrapper">
         <div class="menu">
           <div class="title">
             <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
+          </div>
+          <div class="tabs">
+            <button id="mains">Mains</button>
+            <button class="soups">Soups</button>
+            <button class="sandwiches">Sandwiches</button>
+            <button class="drinks">Drinks</button>
+            <button class="desserts">Desserts</button>
+            <button class="bubble-tea">Bubble Tea </button>
           </div>
           <div id="category-mains">MAINS:</div>
           </div onclick="menuFocusMains()">
@@ -61,7 +75,9 @@
 <h3>Your order:</h3>
 <h3>ERL's</h3>
 <article class ="cart-container">
-
+  <div class="quantity buttons_added">
+    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+  </div>
 </article>
   <section>
   <div class="order-total">
