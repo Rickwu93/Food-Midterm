@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS menu_items CASCADE;
 
 
-CREATE menu_items (
+CREATE TABLE menu_items (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255),
   food_description TEXT,
