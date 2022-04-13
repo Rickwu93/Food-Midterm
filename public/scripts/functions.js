@@ -9,13 +9,14 @@ const addButtonListeners = function() {
   });
 }
 
+
 // Fills the menu div html for the menu-items
 const populateMenu = function(menuItemsObj) {
   for (let menuItem of menuItemsObj) {
 
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
-  
+
     let menuItemHTML = `
       <div class="image-container">
         <img src="${menuItem.item_url}" alt="picture of ${menuItem.name}"/>
@@ -28,9 +29,9 @@ const populateMenu = function(menuItemsObj) {
       <div class="button-container">
         <button data="${menuItem.id}" class="add-to_cart">Add To Cart</button>
       </div>
-    
+
     `;
-    
+
     singleMenu.innerHTML = menuItemHTML;
     menuArea.append(singleMenu);
   };
@@ -47,7 +48,7 @@ const populatePastOrders = function(pastOrdersObj) {
 
   const pastOrdersTitle = document.createElement('h3');
   pastOrdersTitle.textContent = `Past orders for: ${pastOrdersObj.customerName}`;
-  
+
   // List that will display the past orders
 
   const displayOrders = document.createElement('ul');
@@ -61,7 +62,7 @@ const populatePastOrders = function(pastOrdersObj) {
     <span>Special Instructions:</span>
   `;
   displayOrders.append(titleBar);
-  
+
   for (let order of pastOrdersObj.orders) {
     let displayOrder = document.createElement('li');
     displayOrder.classList.add('past-order_li');
@@ -101,7 +102,7 @@ const displayLoggedInEmail = function(userInfoObj) {
 
   const userEmailDisplay = document.createElement('span');
   userEmailDisplay.textContent = `Logged in as: ${userInfoObj.email}`;
-  
+
   loggedInDiv.append(userEmailDisplay);
   headerBar.append(loggedInDiv);
 
@@ -118,10 +119,10 @@ const addToCart = function(menuItemId, menuItemsObj) {
 
   // Create HTML element to append to cart area
   const orderItem = document.createElement('div');
-  
+
   const itemName = document.createElement('p');
   itemName.textContent = itemToCart.name;
-   
+
   const itemPrice = document.createElement('p');
   itemPrice.classList.add('item-price_cart');
   itemPrice.setAttribute('data', itemToCart.id);
@@ -138,7 +139,7 @@ const updateOrderTotal = function(menuItemsObj) {
   let total = 0;
   const orderedItems = document.querySelectorAll('.item-price_cart');
   let prices = [];
-  
+
   for (let item of orderedItems) {
     let itemId = item.getAttribute('data');
 
@@ -147,7 +148,7 @@ const updateOrderTotal = function(menuItemsObj) {
         total += Number(menuItem.price);
         break; // Stops duplicate items from being added, won't need with database
       }
-    } 
+    }
   }
   // Could send the order total to the database at this point too
 
