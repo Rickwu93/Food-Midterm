@@ -1,3 +1,4 @@
+
 // Add menu item to cart
 const addToCart = function(menuItemId, menuItemsArray) {
   let itemToCart;
@@ -28,25 +29,42 @@ const addToCart = function(menuItemId, menuItemsArray) {
   <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
   <input type="button" value="+" class="plus"> 
   `;
- 
-  orderItem.append(qtyCount);
 
+  
+  orderItem.append(qtyCount);
+  
   orderItem.append(itemPrice);
-
+  
   cartContainer.append(orderItem);
+
+  // Add listener to qty buttons
+  const qtyButtonsAdded = document.querySelectorAll('.buttons_added');
+  console.log('qtyButtonsAdded: ', qtyButtonsAdded);
+  qtyButtonsAdded.forEach(qtyButton => {
+    console.log(qtyButton);
+    qtyButton.addEventListener('click', () => {
+      updateOrderTotal(menuItemsArray);
+    })
+    qtyButton.addEventListener('change', () => {
+      updateOrderTotal(menuItemsArray);
+    });
+  });
 }
 
 // Update order total in cart area
 const updateOrderTotal = function(menuItemsArray) {
   let total = 0;
   const orderedItems = document.querySelectorAll('.item-price_cart');
+  const itemQuantities = document.querySelectorAll('.qty');
 
-  for (let item of orderedItems) {
-    let itemId = item.getAttribute('data');
+  for (let i = 0; i < orderedItems.length; i++) {
+    let itemId = orderedItems[i].getAttribute('data');
+    let qty = itemQuantities[i].value;
+    console.log('Quantity: ', qty);
 
     for (let menuItem of menuItemsArray) {
       if (menuItem.id == itemId) {
-        total += Number(menuItem.price);
+        total += Number(menuItem.price) * qty;
         break; // Stops duplicate items from being added, won't need with database
       }
     }

@@ -24,6 +24,7 @@ if (checkForLoggedIn(userInfoObj)) {
 cartContainer.addEventListener('DOMNodeInserted', () => {
   updateOrderTotal(menuItemsArray);
 });
+
 // Update total if item is removed.
 cartContainer.addEventListener('DOMNodeInserted', () => {
   updateOrderTotal(menuItemsArray);
