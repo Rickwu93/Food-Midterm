@@ -53,7 +53,7 @@ const populateMenu = function(menuItemsArray) {
         <img src="${menuItem.item_url}" alt="picture of ${menuItem.name}"/>
       </div>
       <div class="menu-content">
-        <h4>${menuItem.name}<span>$${menuItem.price}<span></h4>
+        <h4>${menuItem.name}<span>$${(menuItem.price / 100).toFixed(2)}<span></h4>
         <p>${menuItem.food_description}</p>
         </div>
       <div style="width: 10%"></div>
@@ -126,6 +126,7 @@ const checkForLoggedIn = function() {
   return true;
 };
 
+
 // Display logged in as: *[user]email* in the top left of header bar
 const displayLoggedInEmail = function(userInfoObj) {
   const loggedInDiv = document.createElement('div');
@@ -157,7 +158,7 @@ const addToCart = function(menuItemId, menuItemsArray) {
   const itemPrice = document.createElement('p');
   itemPrice.classList.add('item-price_cart');
   itemPrice.setAttribute('data', itemToCart.id);
-  itemPrice.textContent = `$${itemToCart.price}`;
+  itemPrice.textContent = `$${(itemToCart.price / 100).toFixed(2)}`;
 
   orderItem.append(itemName);
   orderItem.append(itemPrice);
@@ -169,7 +170,6 @@ const addToCart = function(menuItemId, menuItemsArray) {
 const updateOrderTotal = function(menuItemsArray) {
   let total = 0;
   const orderedItems = document.querySelectorAll('.item-price_cart');
-  let prices = [];
 
   for (let item of orderedItems) {
     let itemId = item.getAttribute('data');
@@ -184,5 +184,5 @@ const updateOrderTotal = function(menuItemsArray) {
   // Could send the order total to the database at this point too
 
   orderTotalDisplay.textContent = '';
-  orderTotalDisplay.textContent = `$${total}`;
+  orderTotalDisplay.textContent = `$${(total / 100).toFixed(2)}`;
 }
