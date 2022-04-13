@@ -11,3 +11,4 @@ const menuArea = document.querySelector('.menu');
 const cartContainer = document.querySelector('.cart-container');
 
 const orderTotalDisplay = document.querySelector('.order-total-display');
+

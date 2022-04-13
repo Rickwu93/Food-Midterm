@@ -33,5 +33,3 @@ cartContainer.addEventListener('DOMNodeInserted', () => {
   console.log('order change');
   updateOrderTotal(menuItemsObj);
 });
-
-

@@ -9,7 +9,6 @@ const addButtonListeners = function() {
   });
 }
 
-
 // Fills the menu div html for the menu-items
 const populateMenu = function(menuItemsObj) {
   for (let menuItem of menuItemsObj) {
@@ -155,3 +154,10 @@ const updateOrderTotal = function(menuItemsObj) {
   orderTotalDisplay.textContent = '';
   orderTotalDisplay.textContent = `$${total}`;
 }
+
+// Category focus for menu
+
+menuFocusMains = function() {
+document.getElementById("category.mains").focus({preventScroll:false});
+}
+
