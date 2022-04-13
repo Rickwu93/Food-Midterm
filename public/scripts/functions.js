@@ -4,15 +4,26 @@ const addButtonListeners = function() {
   addToCartBtns.forEach(button => {
     button.addEventListener('click', (e) => {
       const menuItemId = e.target.getAttribute('data');
-      addToCart(menuItemId, menuItemsObj);
+      addToCart(menuItemId, menuItemsArray);
     });
   });
 }
 
-// Fills the menu div html for the menu-items
-const populateMenu = function(menuItemsObj) {
-  for (let menuItem of menuItemsObj) {
+// Fetch menu_items from database and return object
+const returnMenu = function() {
+  function httpGet(theUrl) {
+    let xmlHttpReq = new XMLHttpRequest();
+    xmlHttpReq.open("GET", theUrl, false); 
+    xmlHttpReq.send(null);
+    return xmlHttpReq.responseText;
+  }
+  return JSON.parse(httpGet('/api/menu')).menuItems;
+}
 
+// Fills the menu div html for the menu-items
+const populateMenu = function(menuItemsArray) {
+  for (let menuItem of menuItemsArray) {
+     
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
 
@@ -108,11 +119,11 @@ const displayLoggedInEmail = function(userInfoObj) {
 }
 
 // Add menu item to cart
-const addToCart = function(menuItemId, menuItemsObj) {
+const addToCart = function(menuItemId, menuItemsArray) {
   let itemToCart;
 
   // Find item from menu database that matches id from parameter
-  menuItemsObj.forEach(menuItem => {
+  menuItemsArray.forEach(menuItem => {
     if (menuItem.id == menuItemId) itemToCart = menuItem;
   });
 
@@ -134,7 +145,7 @@ const addToCart = function(menuItemId, menuItemsObj) {
 }
 
 // Update order total in cart area
-const updateOrderTotal = function(menuItemsObj) {
+const updateOrderTotal = function(menuItemsArray) {
   let total = 0;
   const orderedItems = document.querySelectorAll('.item-price_cart');
   let prices = [];
@@ -142,7 +153,7 @@ const updateOrderTotal = function(menuItemsObj) {
   for (let item of orderedItems) {
     let itemId = item.getAttribute('data');
 
-    for (let menuItem of menuItemsObj) {
+    for (let menuItem of menuItemsArray) {
       if (menuItem.id == itemId) {
         total += Number(menuItem.price);
         break; // Stops duplicate items from being added, won't need with database
@@ -154,10 +165,3 @@ const updateOrderTotal = function(menuItemsObj) {
   orderTotalDisplay.textContent = '';
   orderTotalDisplay.textContent = `$${total}`;
 }
-
-// Category focus for menu
-
-menuFocusMains = function() {
-document.getElementById("category.mains").focus({preventScroll:false});
-}
-
