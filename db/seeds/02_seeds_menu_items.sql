@@ -1,7 +1,7 @@
 INSERT INTO menu_items (name, food_description, price, item_url, type_of_item)
   VALUES
   ('Phở Đặc Biệt', 'Rare beef, flank, tendon, tripe, beefball', 1500, '/docs/food-images/house-special.jpeg', 'main'),
-  ('Phở tái', 'Rare beef, beefball', 1300, 'public/docs/food-images/pho2.jpeg', 'main'),
+  ('Phở tái', 'Rare beef, beefball', 1300, '/docs/food-images/pho2.jpeg', 'main'),
   ('Phở satế bò', 'Spicy peanut sate soup, rare beef or chicken', 1600, '/docs/food-images/pho3.jpeg', 'main'),
   ('Phở Fettuccine', 'Fettuccine noodles, special sauce', 1800, '/docs/food-images/italian2.jpeg', 'main'),
   ('Phở noodles with Meat Sauce', 'Noodles, meat sauce', 1700, '/docs/food-images/italian3.jpeg', 'main'),
