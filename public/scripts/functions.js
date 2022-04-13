@@ -155,7 +155,6 @@ const updateOrderTotal = function(menuItemsObj) {
   orderTotalDisplay.textContent = `$${total}`;
 }
 
-
 // Category focus for menu
 
 menuFocusMains = function() {
