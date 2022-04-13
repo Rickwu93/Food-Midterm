@@ -22,6 +22,27 @@ const returnMenu = function() {
 
 // Fills the menu div html for the menu-items
 const populateMenu = function(menuItemsArray) {
+  // menuArea.innerHTML = '';
+
+  // const menuTitleBar = document.createElement('div');
+
+  menuArea.innerHTML = `
+    <div class="title">
+      <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
+    </div>
+    <div class="tabs">
+      <button id="mains">Mains</button>
+      <button class="soups">Soups</button>
+      <button class="sandwiches">Sandwiches</button>
+      <button class="drinks">Drinks</button>
+      <button class="desserts">Desserts</button>
+      <button class="bubble-tea">Bubble Tea </button>
+    </div>
+  `;
+
+  // menuTitleBar.innerHTML = titleContent;
+  // menuArea.append(menuTitleBar);
+
   for (let menuItem of menuItemsArray) {
      
     let singleMenu = document.createElement('div');

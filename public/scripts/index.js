@@ -8,7 +8,6 @@ addButtonListeners();
 
 // Re-populate menu area when "MENU" button clicked in header
 menuBtn.addEventListener('click', () => {
-  menuArea.innerHTML = '';
   populateMenu(menuItemsArray);
   addButtonListeners();
 });
