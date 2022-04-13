@@ -1,15 +1,16 @@
-/* WE DID NOT WRITE THIS - RETRIEVED FROM https://embed.plnkr.co/plunk/B5waxZ */
+/* WE DID NOT WRITE THIS - RETRIEVED FROM TO https://embed.plnkr.co/plunk/B5waxZ */
 
 .quantity {
-  display: flex; }
+  display: inline-block;
+  width: 30%;
+}
 
  .quantity .input-text.qty {
-  width: 10%;
+  width: 20%;
   height: 2em;
   padding: 0 5px;
   text-align: center;
   background-color: transparent;
-  border: 1px solid #070000;
  }
 
  .quantity.buttons_added {
@@ -27,17 +28,12 @@
 
  .quantity.buttons_added .minus,
  .quantity.buttons_added .plus {
-  padding: 7px 10px 8px;
-  height: 41px;
+  width: 30%;
+  padding: 0.5em;
+  height: 100%;
   background-color: #ffffff;
   border: 1px solid #efefef;
   cursor:pointer;}
-
- .quantity.buttons_added .minus {
-  border-right: 0; }
-
- .quantity.buttons_added .plus {
-  border-left: 0; }
 
  .quantity.buttons_added .minus:hover,
  .quantity.buttons_added .plus:hover {
@@ -47,7 +43,8 @@
  .quantity input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
-  margin: 0; }
+  margin: 0;
+}
 
   .quantity.buttons_added .minus:focus,
  .quantity.buttons_added .plus:focus {
