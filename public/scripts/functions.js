@@ -22,10 +22,6 @@ const returnMenu = function() {
 
 // Fills the menu div html for the menu-items
 const populateMenu = function(menuItemsArray) {
-  // menuArea.innerHTML = '';
-
-  // const menuTitleBar = document.createElement('div');
-
   menuArea.innerHTML = `
     <div class="title">
       <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
