@@ -1,5 +1,5 @@
 // Add menu-items to menu area on page load
-const menuItemsArray = returnMenu(); 
+const menuItemsArray = returnMenu();
 
 populateMenu(menuItemsArray);
 

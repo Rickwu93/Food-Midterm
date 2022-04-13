@@ -1,5 +1,7 @@
 // WE DID NOT WRITE THIS - RETRIEVED FROM https://embed.plnkr.co/plunk/B5waxZ
 
+//SCRIPT FOR QUANTITY-BUTTON
+
 function wcqib_refresh_quantity_increments() {
   jQuery("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").each(function(a, b) {
       const c = jQuery(b);
