@@ -1,5 +1,7 @@
 // Add menu-items to menu area on page load
-populateMenu(menuItemsObj);
+const menuItemsArray = returnMenu(); 
+
+populateMenu(menuItemsArray);
 
 // Add listeners to menu buttons after buttons are generated
 addButtonListeners();
@@ -7,7 +9,7 @@ addButtonListeners();
 // Re-populate menu area when "MENU" button clicked in header
 menuBtn.addEventListener('click', () => {
   menuArea.innerHTML = '';
-  populateMenu(menuItemsObj);
+  populateMenu(menuItemsArray);
   addButtonListeners();
 });
 
@@ -21,15 +23,12 @@ if (checkForLoggedIn(userInfoObj)) {
   displayLoggedInEmail(userInfoObj);
 };
 
-// Update the order total in the cart area
-
 // Update total if item is added
 cartContainer.addEventListener('DOMNodeInserted', () => {
-  console.log('order change');
-  updateOrderTotal(menuItemsObj);
+  updateOrderTotal(menuItemsArray);
 });
 // Update total if item is removed.
 cartContainer.addEventListener('DOMNodeInserted', () => {
   console.log('order change');
-  updateOrderTotal(menuItemsObj);
+  updateOrderTotal(menuItemsArray);
 });
