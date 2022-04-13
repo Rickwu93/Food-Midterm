@@ -21,6 +21,7 @@ justify-content: center;
   background-color: #424e6f;
   color: white;
   width: 15%;
+  font-family:fantasy;
 }
 
 .tabs button:hover{
@@ -53,6 +54,7 @@ justify-content: center;
   border: 1px solid rgb(11, 11, 11);
   overflow-y: scroll;
   cursor: pointer;
+  font-family:fantasy;
 }
 
 .menu::-webkit-scrollbar {

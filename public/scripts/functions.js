@@ -13,7 +13,7 @@ const addButtonListeners = function() {
 const returnMenu = function() {
   function httpGet(theUrl) {
     let xmlHttpReq = new XMLHttpRequest();
-    xmlHttpReq.open("GET", theUrl, false); 
+    xmlHttpReq.open("GET", theUrl, false);
     xmlHttpReq.send(null);
     return xmlHttpReq.responseText;
   }
@@ -24,7 +24,7 @@ const returnMenu = function() {
 const populateMenu = function(menuItemsArray) {
   menuArea.innerHTML = `
     <div class="title">
-      <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
+      <h4><span>Italian Vietnamese Fusion Menu</span></h4>
     </div>
     <div class="tabs">
       <button id="mains">Mains</button>
@@ -40,7 +40,7 @@ const populateMenu = function(menuItemsArray) {
   // menuArea.append(menuTitleBar);
 
   for (let menuItem of menuItemsArray) {
-     
+
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
 
@@ -164,7 +164,7 @@ const addToCart = function(menuItemId, menuItemsArray) {
   qtyCount.innerHTML = `
   <input type="button" value="-" class="minus">
   <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-  <input type="button" value="+" class="plus"> 
+  <input type="button" value="+" class="plus">
   `;
  
   orderItem.append(qtyCount);
