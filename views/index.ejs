@@ -22,8 +22,6 @@
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
         rel="stylesheet"
         />
-
-        <!-- For quantity button -->
         <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- App css -->
@@ -35,10 +33,14 @@
 
     <!-- JavaScript -->
     <script src="./scripts/DOMobjects.js" defer></script>
+    <script src="./scripts/menu-functions.js" defer></script>
+    <script src="./scripts/past-orders.js" defer></script>
+    <script src="./scripts/logged-in.js" defer></script>
+    <script src="./scripts/cart.js" defer></script>
     <script src="./scripts/databaseObjects.js" defer></script>
-    <script src="./scripts/functions.js" defer></script>
     <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
+
   </head>
   <body>
     <header>
@@ -61,6 +63,14 @@
           <div class="title">
             <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
           </div>
+          <div class="tabs">
+            <button id="mains">Mains</button>
+            <button class="soups">Soups</button>
+            <button class="sandwiches">Sandwiches</button>
+            <button class="drinks">Drinks</button>
+            <button class="desserts">Desserts</button>
+            <button class="bubble-tea">Bubble Tea </button>
+          </div>
           <div id="category-mains">MAINS:</div>
           </div onclick="menuFocusMains()">
         </div>
@@ -69,9 +79,9 @@
 <h3>Your order:</h3>
 <h3>ERL's</h3>
 <article class ="cart-container">
-  <!-- <div class="quantity buttons_added">
+  <div class="quantity buttons_added">
     <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-  </div> -->
+  </div>
 </article>
   <section>
   <div class="order-total">

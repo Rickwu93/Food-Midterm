@@ -1,6 +1,4 @@
 // Add menu-items to menu area on page load
-const menuItemsArray = returnMenu();
-
 populateMenu(menuItemsArray);
 
 // Add listeners to menu buttons after buttons are generated
@@ -28,6 +26,5 @@ cartContainer.addEventListener('DOMNodeInserted', () => {
 });
 // Update total if item is removed.
 cartContainer.addEventListener('DOMNodeInserted', () => {
-  console.log('order change');
   updateOrderTotal(menuItemsArray);
 });

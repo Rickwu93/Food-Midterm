@@ -1,3 +1,6 @@
+// Pull menu_items from database as an array of objects
+const menuItemsArray = returnMenu();
+
 // Infor for displaying user's name in past-orders and email in header
 const userInfoObj = {
   email: 'user@email.com',
