@@ -1,66 +1,46 @@
+// event listeners for menu category tab clicks
+
 $(() => {
 
   $('.mains').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.main');
-    const position = scrollTo.offset().top
-            - container.offset().top
-            + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.main');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
-});
 
-$(() => {
   $('.soups').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.soup');
-    const position = scrollTo.offset().top
-              - container.offset().top
-              + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.soup');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
-});
 
-$(() => {
   $('.sandwiches').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.sandwich');
-    const position = scrollTo.offset().top
-                - container.offset().top
-                + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.sandwich');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
-});
 
-$(() => {
   $('.drinks').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.drink');
-    const position = scrollTo.offset().top
-                  - container.offset().top
-                  + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.drink');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
-});
 
-$(() => {
   $('.desserts').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.dessert');
-    const position = scrollTo.offset().top
-                    - container.offset().top
-                    + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.dessert');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
-});
 
-$(() => {
   $('.bubble-tea').on('click', function() {
     const container = $('.menu');
-    const scrollTo = $('.bubbletea');
-    const position = scrollTo.offset().top
-          - container.offset().top
-          + container.scrollTop();
-    container.scrollTop(position);
+    const item = $('.bubbletea');
+    const target = item.offset().top - container.offset().top + container.scrollTop();
+    container.scrollTop(target);
   });
 });

@@ -20,7 +20,7 @@ header {
   padding-right: 4em;
 }
 
-head span {
+.logged-in {
   margin-right: 3em;
 }
 
@@ -29,7 +29,6 @@ head span {
   display: flex;
   order: 2;
 }
-
 
 header h1 {
   color: #EEE;
