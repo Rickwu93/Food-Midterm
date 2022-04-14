@@ -56,6 +56,11 @@ justify-content: center;
   font-family:fantasy;
 }
 
+.menu div {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .menu::-webkit-scrollbar {
   width: 0;
   background: transparent;

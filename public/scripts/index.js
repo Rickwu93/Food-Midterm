@@ -29,3 +29,7 @@ cartContainer.addEventListener('DOMNodeInserted', () => {
 cartContainer.addEventListener('DOMNodeInserted', () => {
   updateOrderTotal(menuItemsArray);
 });
+
+checkoutBtn.addEventListener('click', () => {
+  alert('Clicked checkout-button');
+});
