@@ -26,14 +26,14 @@ const addToCart = function(menuItemId, menuItemsArray) {
   qtyCount.classList.add('buttons_added');
   qtyCount.innerHTML = `
   <input type="button" value="-" class="minus">
-  <input type="number" step="1" min="1" max="9" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-  <input type="button" value="+" class="plus"> 
+  <input type="number" step="1" min="1" max="9" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="numeric">
+  <input type="button" value="+" class="plus">
   `;
 
   orderItem.append(qtyCount);
-  
+
   orderItem.append(itemPrice);
-  
+
   cartContainer.append(orderItem);
 
   // Add listeners to quantity fields/buttons

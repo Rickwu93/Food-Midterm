@@ -3,12 +3,12 @@
 .quantity {
   display: inline-block;
   width: 30%;
+  order: 3;
 }
 
  .quantity .input-text.qty {
   width: 20%;
   height: 2em;
-  padding: 0 5px;
   text-align: center;
   background-color: transparent;
  }
@@ -17,7 +17,9 @@
   text-align: left;
   position: relative;
   white-space: nowrap;
-  vertical-align: top; }
+  vertical-align: top;
+  border-bottom: transparent;
+ }
 
  .quantity.buttons_added input {
   display: inline-block;
@@ -30,7 +32,7 @@
  .quantity.buttons_added .plus {
   width: 30%;
   padding: 0.5em;
-  height: 100%;
+  height: 65%;
   background-color: #ffffff;
   border: 1px solid #efefef;
   cursor:pointer;}
