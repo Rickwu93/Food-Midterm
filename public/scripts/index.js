@@ -37,6 +37,6 @@ checkoutBtn.addEventListener('click', () => {
 
   alert(customerMessage());
   // Send text messages to restaurant and customer
-  sendCustomerSMS();
-  sendRestaurantSMS()
+  // sendCustomerSMS();
+  // sendRestaurantSMS();
 });
