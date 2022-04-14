@@ -35,7 +35,7 @@ checkoutBtn.addEventListener('click', () => {
   const orderedItems = document.querySelectorAll('.menu-item_name');
   if (orderedItems.length === 0) return;
 
-  alert(restaurantMessage());
+  alert(customerMessage());
   // Send text messages to restaurant and customer
   // sendCustomerSMS();
   // sendRestaurantSMS();

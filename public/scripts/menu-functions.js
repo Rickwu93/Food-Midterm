@@ -2,7 +2,7 @@
 const returnMenu = function() {
   function httpGet(theUrl) {
     let xmlHttpReq = new XMLHttpRequest();
-    xmlHttpReq.open("GET", theUrl, false);
+    xmlHttpReq.open("GET", theUrl, false); 
     xmlHttpReq.send(null);
     return xmlHttpReq.responseText;
   }
@@ -26,7 +26,7 @@ const populateMenu = function(menuItemsArray) {
       <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
     </div>
     <div class="tabs">
-      <button class="mains">Mains</button>
+      <button id="mains">Mains</button>
       <button class="soups">Soups</button>
       <button class="sandwiches">Sandwiches</button>
       <button class="drinks">Drinks</button>
@@ -51,7 +51,7 @@ const populateMenu = function(menuItemsArray) {
   const menuBubbleTea = document.querySelector('.bubbletea');
 
   for (let menuItem of menuItemsArray) {
-
+     
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
 

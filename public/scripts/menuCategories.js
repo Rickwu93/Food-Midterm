@@ -1,5 +1,4 @@
 // event listeners for menu category tab clicks
-
 $(() => {
 
   $('.mains').on('click', function() {
