@@ -2,7 +2,6 @@ body {
   display: flex;
   height: 100vh;
   background-color: #5a5555;
-  font-family: sans-serif;
   margin: 0;
 }
 
@@ -21,12 +20,15 @@ header {
   padding-right: 4em;
 }
 
+.logged-in {
+  margin-right: 3em;
+}
+
 .logo {
   width: 10em;
   display: flex;
   order: 2;
 }
-
 
 header h1 {
   color: #EEE;

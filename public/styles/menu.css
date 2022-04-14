@@ -54,6 +54,7 @@ justify-content: center;
   overflow-y: scroll;
   cursor: pointer;
   font-family:fantasy;
+  scroll-behavior: smooth;
 }
 
 .menu div {
