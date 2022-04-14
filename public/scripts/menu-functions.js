@@ -33,7 +33,22 @@ const populateMenu = function(menuItemsArray) {
       <button class="desserts">Desserts</button>
       <button class="bubble-tea">Bubble Tea </button>
     </div>
+    <div class="main"></div>
+    <div class="soup"></div>
+    <div class="sandwich"></div>
+    <div class="drink"></div>
+    <div class="dessert"></div>
+    <div class="bubbletea"></div>
   `;
+
+  // Menu categories
+  const menuTitleBar = document.querySelector('.menu-title_bar');
+  const menuMains = document.querySelector('.main');
+  const menuSoups = document.querySelector('.soup');
+  const menuSandwiches = document.querySelector('.sandwich');
+  const menuDrinks = document.querySelector('.drink');
+  const menuDessert = document.querySelector('.dessert');
+  const menuBubbleTea = document.querySelector('.bubbletea');
 
   for (let menuItem of menuItemsArray) {
      
@@ -56,6 +71,27 @@ const populateMenu = function(menuItemsArray) {
     `;
 
     singleMenu.innerHTML = menuItemHTML;
-    menuArea.append(singleMenu);
+
+    switch (menuItem.type_of_item) {
+      case 'main':
+        menuMains.append(singleMenu);
+        break;
+      case 'soup':
+        menuSoups.append(singleMenu);
+        break;
+      case 'sandwich':
+        menuSandwiches.append(singleMenu);
+        break;
+      case 'drink':
+        menuDrinks.append(singleMenu);
+        break;
+      case 'dessert':
+        menuDessert.append(singleMenu);
+        break;
+      case 'bubbletea':
+        menuBubbleTea.append(singleMenu);
+        break;
+    }
+    // menuArea.append(singleMenu);
   };
 };

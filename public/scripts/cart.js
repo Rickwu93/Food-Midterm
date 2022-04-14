@@ -10,6 +10,7 @@ const addToCart = function(menuItemId, menuItemsArray) {
   const orderItem = document.createElement('div');
 
   const itemName = document.createElement('p');
+  itemName.classList.add('menu-item_name');
   itemName.textContent = itemToCart.name;
 
   const itemPrice = document.createElement('p');
