@@ -26,24 +26,35 @@ const addToCart = function(menuItemId, menuItemsArray) {
   qtyCount.classList.add('buttons_added');
   qtyCount.innerHTML = `
   <input type="button" value="-" class="minus">
-  <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+  <input type="number" step="1" min="1" max="9" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
   <input type="button" value="+" class="plus"> 
   `;
 
-  
   orderItem.append(qtyCount);
   
   orderItem.append(itemPrice);
   
   cartContainer.append(orderItem);
 
-  // Add listener to qty buttons
-  const qtyButtonsAdded = document.querySelectorAll('.buttons_added');
-  qtyButtonsAdded.forEach(qtyButton => {
-    qtyButton.addEventListener('click', () => {
+  // Add listeners to quantity fields/buttons
+
+  const minusBtns = document.querySelectorAll('.minus');
+  minusBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       updateOrderTotal(menuItemsArray);
-    })
-    qtyButton.addEventListener('change', () => {
+    });
+  });
+
+  const qtyInputFields = document.querySelectorAll('.qty');
+  qtyInputFields.forEach(btn => {
+    btn.addEventListener('change', () => {
+      updateOrderTotal(menuItemsArray);
+    });
+  });
+
+  const plusBtns = document.querySelectorAll('.plus');
+  plusBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       updateOrderTotal(menuItemsArray);
     });
   });
@@ -62,12 +73,10 @@ const updateOrderTotal = function(menuItemsArray) {
     for (let menuItem of menuItemsArray) {
       if (menuItem.id == itemId) {
         total += Number(menuItem.price) * qty;
-        break; // Stops duplicate items from being added, won't need with database
       }
     }
   }
   // Could send the order total to the database at this point too
 
-  orderTotalDisplay.textContent = '';
   orderTotalDisplay.textContent = `$${(total / 100).toFixed(2)}`;
 }
