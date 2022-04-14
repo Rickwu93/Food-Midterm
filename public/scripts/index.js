@@ -31,5 +31,5 @@ cartContainer.addEventListener('DOMNodeInserted', () => {
 });
 
 checkoutBtn.addEventListener('click', () => {
-  alert('Clicked checkout-button');
+  alert(gatherOrderInfo());
 });
