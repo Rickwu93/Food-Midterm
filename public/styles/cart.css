@@ -1,7 +1,7 @@
 .cart {
   display: flex;
-  width: 25%;
-  height: 75%;
+  width: 35%;
+  height: 80%;
   background-color: #424e6f;
   margin: 7% 1% 0 0;
   flex-direction: column;
@@ -28,6 +28,8 @@
 .cart-container {
 height: 40%;
 overflow-y: scroll;
+margin-left: 1em;
+margin-right: 1em;
 }
 
 .cart-container::-webkit-scrollbar {
@@ -38,9 +40,7 @@ overflow-y: scroll;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-margin-top: 5px;
-margin-left: 1em;
-margin-right: 1em;
+margin-top: 0.5em;
 border-bottom: 1px dashed rgb(255, 255, 255);
 }
 
