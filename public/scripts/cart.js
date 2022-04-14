@@ -39,23 +39,24 @@ const addToCart = function(menuItemId, menuItemsArray) {
   // Add listeners to quantity fields/buttons
 
   const minusBtns = document.querySelectorAll('.minus');
+  const qtyInputFields = document.querySelectorAll('.qty');
+  const plusBtns = document.querySelectorAll('.plus');
+
   minusBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      updateOrderTotal(menuItemsArray);
+      setTimeout(() => updateOrderTotal(menuItemsArray), 50);
     });
   });
 
-  const qtyInputFields = document.querySelectorAll('.qty');
   qtyInputFields.forEach(btn => {
     btn.addEventListener('change', () => {
       updateOrderTotal(menuItemsArray);
     });
   });
 
-  const plusBtns = document.querySelectorAll('.plus');
   plusBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      updateOrderTotal(menuItemsArray);
+      setTimeout(() => updateOrderTotal(menuItemsArray), 50);
     });
   });
 }
