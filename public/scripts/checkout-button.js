@@ -38,10 +38,11 @@ const customerMessage = function() {
 };
 
 const restaurantMessage = function() {
-  let message = `Incoming Order:\n------------------\n\n`;
+  const orders = gatherOrderInfo();
+  let message = `Incoming Order:\n------------------\n`;
 
   for (let order of orders) {
-    message += `${order.menuItem},    qty: ${order.qty}   $${order.price}\n`
+    message += `${order.menuItem},    qty: ${order.qty}\n`
   }
   return message;
 }
