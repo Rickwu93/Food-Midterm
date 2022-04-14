@@ -34,12 +34,16 @@ header h1 {
   margin: 1% 0 0 55%;
 }
 
+header input:hover {
+  color: #FFF;
+}
+
 main {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-image: url('../../docs/food-images/background-image.jpg')
+  background-image: url('../../docs/food-images/background-image.jpg');
 }
 
 .menu:-webkit-scrollbar:-webkit-scrollbar {
