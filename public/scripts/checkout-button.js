@@ -1,6 +1,5 @@
 const gatherOrderInfo = function() {
   let orders = [];
-  let message = '';
 
   const orderedItems = document.querySelectorAll('.menu-item_name');
   const itemQuantities = document.querySelectorAll('.qty');
@@ -21,10 +20,28 @@ const gatherOrderInfo = function() {
 
     orders.push(singleOrder)
    }
-   
+  return orders;   
 };
 
-// for (let order of orders) {
-//   message += `${order.menuItem} qty: ${order.qty}  $${order.price}\n`
-// }
-// return message;
+const customerMessage = function() {
+  const orders = gatherOrderInfo();
+  let message = `Order Recieved!\n------------------\n`;
+  let totalPrice = 0;
+
+  for (let order of orders) {
+    message += `${order.menuItem},    qty: ${order.qty}   $${order.price}\n`
+    totalPrice += Number(order.price);
+  }
+  message += `------------------\nTOTAL: $${totalPrice.toFixed(2)}\n`;
+  message += Date().toString().slice(0, 21);
+  return message;
+};
+
+const restaurantMessage = function() {
+  let message = `Incoming Order:\n------------------\n\n`;
+
+  for (let order of orders) {
+    message += `${order.menuItem},    qty: ${order.qty}   $${order.price}\n`
+  }
+  return message;
+}
