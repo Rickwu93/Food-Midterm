@@ -31,5 +31,12 @@ cartContainer.addEventListener('DOMNodeInserted', () => {
 });
 
 checkoutBtn.addEventListener('click', () => {
-  alert('Clicked checkout-button');
+  // Prevent texts from being sent on empty orders
+  const orderedItems = document.querySelectorAll('.menu-item_name');
+  if (orderedItems.length === 0) return;
+
+  alert(customerMessage());
+  // Send text messages to restaurant and customer
+  // sendCustomerSMS();
+  // sendRestaurantSMS();
 });
