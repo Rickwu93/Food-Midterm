@@ -2,7 +2,6 @@ body {
   display: flex;
   height: 100vh;
   background-color: #5a5555;
-  font-family: sans-serif;
   margin: 0;
 }
 
@@ -19,6 +18,10 @@ header {
   flex-direction: row-reverse;
   padding-left: 1em;
   padding-right: 4em;
+}
+
+head span {
+  margin-right: 3em;
 }
 
 .logo {
