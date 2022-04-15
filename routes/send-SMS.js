@@ -11,13 +11,13 @@ const restaurantNumber = process.env.RESTAURANT_NUMBER;
 const client = require('twilio')(accountSid, authToken);
 
 module.exports = (db) => {
-  console.log(db);
+  console.log('restaurantNumber: ', restaurantNumber);
 
   router.post("/", (req, res) => {
     const customerMessage = req.body['customer'];
     const restaurantMessage = req.body['restaurant'];
 
-    client.messages
+  client.messages
   .create({
      body: customerMessage,
      from: twilioNumber,
@@ -29,7 +29,7 @@ module.exports = (db) => {
   .create({
      body: restaurantMessage,
      from: twilioNumber,
-     to: restaurantNumber
+     to: '+14036718498'
    })
   .then(message => console.log(message.sid));
   });
