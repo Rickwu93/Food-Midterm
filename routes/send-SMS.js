@@ -12,9 +12,12 @@ const client = require('twilio')(accountSid, authToken);
 module.exports = (db) => {
 
   router.post("/", (req, res) => {
+    const customerMessage = req.body['customer'];
+    const restaurantMessage = req.body['restaurant'];
+
     client.messages
   .create({
-     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+     body: customerMessage,
      from: twilioNumber,
      to: customerNumber
    })
@@ -22,7 +25,7 @@ module.exports = (db) => {
 
   client.messages
   .create({
-     body: 'Restaurant Text',
+     body: restaurantMessage,
      from: twilioNumber,
      to: customerNumber
    })

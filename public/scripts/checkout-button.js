@@ -23,7 +23,7 @@ const gatherOrderInfo = function() {
   return orders;   
 };
 
-const customerMessage = function() {
+const customerSMSMessage = function() {
   const orders = gatherOrderInfo();
   let message = `Order Recieved!\n------------------\n`;
   let totalPrice = 0;
@@ -37,7 +37,7 @@ const customerMessage = function() {
   return message;
 };
 
-const restaurantMessage = function() {
+const restaurantSMSMessage = function() {
   const orders = gatherOrderInfo();
   let message = `Incoming Order:\n------------------\n`;
 
