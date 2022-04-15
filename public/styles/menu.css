@@ -51,7 +51,7 @@ gap: 1px;
 }
 
 .menu {
-  width: 57vw;
+  width: 54vw;
   height: 85%;
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +74,7 @@ gap: 1px;
 .menu-navbar {
   position: fixed;
   background-color: #95CF0E;
-  width: 57vw;
+  width: 54vw;
   margin-right: 4em;
   border-radius: 1em;
   border-bottom: solid black 1px;
