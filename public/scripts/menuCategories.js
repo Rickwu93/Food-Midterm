@@ -1,5 +1,3 @@
-const getCategories = function () {
-
  // event listeners for menu category tab clicks
 
 $(() => {
@@ -48,4 +46,3 @@ $(() => {
     container.scrollTop(target);
   });
 });
-}

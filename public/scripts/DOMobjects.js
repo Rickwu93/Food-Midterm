@@ -17,6 +17,3 @@ const customerMessage = document.querySelector('.customerMessage');
 const restaurantMessage = document.querySelector('.restaurantMessage');
 
 const checkoutBtn = document.querySelector('.checkout-button');
-
-console.lot('cM: ', customerMessage);
-console.lot('rM: ', restaurantMessage);

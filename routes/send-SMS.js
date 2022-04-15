@@ -11,6 +11,7 @@ const restaurantNumber = process.env.RESTAURANT_NUMBER;
 const client = require('twilio')(accountSid, authToken);
 
 module.exports = (db) => {
+  console.log(db);
 
   router.post("/", (req, res) => {
     const customerMessage = req.body['customer'];
