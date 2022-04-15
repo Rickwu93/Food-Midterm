@@ -23,7 +23,6 @@ if (checkForLoggedIn(userInfoObj)) {
 // Update total if item is added
 cartContainer.addEventListener('DOMNodeInserted', () => {
   updateOrderTotal(menuItemsArray);
-  console.log(customerMessage);
   customerMessage.value = customerSMSMessage();
   restaurantMessage.value = restaurantSMSMessage();
 });

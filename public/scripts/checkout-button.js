@@ -6,7 +6,6 @@ const gatherOrderInfo = function() {
 
   for (let i = 0; i < orderedItems.length; i++) {
     let menuItemName = orderedItems[i].textContent;
-    console.log(menuItemName);
     let qty = itemQuantities[i].value;
     let singleOrder = {};
 
@@ -44,5 +43,6 @@ const restaurantSMSMessage = function() {
   for (let order of orders) {
     message += `${order.menuItem},    qty: ${order.qty}\n`
   }
+  message += Date().toString().slice(0, 21);
   return message;
 }

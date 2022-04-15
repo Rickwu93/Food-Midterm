@@ -2,6 +2,11 @@
   width: 120em;
 }
 
+/* .title,
+.tabs {
+  position: absolute;
+} */
+
 .title {
   display: flex;
   text-align: center;
@@ -102,10 +107,15 @@ justify-content: center;
   order: 3;
   width: 20%;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   height: 75%;
   padding-right: 2em;
+  margin-top: 7em;
+}
+
+.button-container input {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .button-container button {

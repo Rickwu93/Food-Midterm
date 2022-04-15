@@ -23,7 +23,7 @@ const addButtonListeners = function() {
 const populateMenu = function(menuItemsArray) {
   menuArea.innerHTML = `
     <div class="title">
-      <h4><span>ERLS: Italian Vietnamese Fusion</span>Menu:</h4>
+      <h2 style='font-size: 2em;'><Menu>ERLS: <span style="font-weight: 300; font-style: italic;">Italian Vietnamese Fusion</span></h4>
     </div>
     <div class="tabs">
       <button id="mains">Mains</button>
