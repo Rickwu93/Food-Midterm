@@ -44,7 +44,6 @@ const populateMenu = function(menuItemsArray) {
   `;
 
   // Menu categories
-  const menuTitleBar = document.querySelector('.menu-title_bar');
   const menuMains = document.querySelector('.main');
   const menuSoups = document.querySelector('.soup');
   const menuSandwiches = document.querySelector('.sandwich');
