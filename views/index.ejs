@@ -70,13 +70,21 @@
 <article class ="cart-container">
 </article>
   <section>
+  <form class="cart" action="/api/send-SMS" method="POST">
+    <h3>Your order:</h3>
+    <article class ="cart-container">
+      <i class="fa-solid fa-x"></i>
+    </article>
+    <article>
+    <input name="customer" title="customer" type="text" class="customerMessage" style="display: none">
+    <input name="restaurant" title="restaurant" type="text" class="restaurantMessage" style="display: none">
   <div class="order-total">
   <h2 class="displayed-order-total">Order Total:</h2>
   <h2 class="order-total-display">$0</h2>
   </div>
   <button class="checkout-button" value="Checkout" type="submit">Checkout</button>
-  </div>
-</section>
+  </article>
+</form>
     </main>
     <footer></footer>
   </body>

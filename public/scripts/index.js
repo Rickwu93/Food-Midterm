@@ -23,20 +23,26 @@ if (checkForLoggedIn(userInfoObj)) {
 // Update total if item is added
 cartContainer.addEventListener('DOMNodeInserted', () => {
   updateOrderTotal(menuItemsArray);
+  customerMessage.value = customerSMSMessage();
+  restaurantMessage.value = restaurantSMSMessage();
 });
 
 // Update total if item is removed.
-cartContainer.addEventListener('DOMNodeInserted', () => {
+cartContainer.addEventListener('DOMNodeRemoved', () => {
   updateOrderTotal(menuItemsArray);
+  customerMessage.value = customerSMSMessage();
+  restaurantMessage.value = restaurantSMSMessage();
 });
+
+// cartForm.addEventListener('submit', () => {
+//   console.log('Form submit');
+// });
 
 checkoutBtn.addEventListener('click', () => {
   // Prevent texts from being sent on empty orders
   const orderedItems = document.querySelectorAll('.menu-item_name');
-  if (orderedItems.length === 0) return;
-
-  alert(customerMessage());
-  // Send text messages to restaurant and customer
-  // sendCustomerSMS();
-  // sendRestaurantSMS();
+  if (orderedItems.length === 0) {
+    alert('There is nothing in your cart.');
+    return;
+  }
 });

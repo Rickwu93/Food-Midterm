@@ -6,7 +6,6 @@ const gatherOrderInfo = function() {
 
   for (let i = 0; i < orderedItems.length; i++) {
     let menuItemName = orderedItems[i].textContent;
-    console.log(menuItemName);
     let qty = itemQuantities[i].value;
     let singleOrder = {};
 
@@ -23,7 +22,7 @@ const gatherOrderInfo = function() {
   return orders;   
 };
 
-const customerMessage = function() {
+const customerSMSMessage = function() {
   const orders = gatherOrderInfo();
   let message = `Order Recieved!\n------------------\n`;
   let totalPrice = 0;
@@ -37,11 +36,13 @@ const customerMessage = function() {
   return message;
 };
 
-const restaurantMessage = function() {
-  let message = `Incoming Order:\n------------------\n\n`;
+const restaurantSMSMessage = function() {
+  const orders = gatherOrderInfo();
+  let message = `Incoming Order:\n------------------\n`;
 
   for (let order of orders) {
-    message += `${order.menuItem},    qty: ${order.qty}   $${order.price}\n`
+    message += `${order.menuItem},    qty: ${order.qty}\n`
   }
+  message += Date().toString().slice(0, 21);
   return message;
 }

@@ -2,7 +2,7 @@
 const returnMenu = function() {
   function httpGet(theUrl) {
     let xmlHttpReq = new XMLHttpRequest();
-    xmlHttpReq.open("GET", theUrl, false);
+    xmlHttpReq.open("GET", theUrl, false); 
     xmlHttpReq.send(null);
     return xmlHttpReq.responseText;
   }
@@ -50,10 +50,8 @@ const populateMenu = function(menuItemsArray) {
   const menuDessert = document.querySelector('.dessert');
   const menuBubbleTea = document.querySelector('.bubbletea');
 
-  getCategories();
-
   for (let menuItem of menuItemsArray) {
-
+     
     let singleMenu = document.createElement('div');
     singleMenu.classList.add('single-menu');
 
