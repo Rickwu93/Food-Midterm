@@ -22,23 +22,25 @@ const addButtonListeners = function() {
 // Fills the menu div html for the menu-items
 const populateMenu = function(menuItemsArray) {
   menuArea.innerHTML = `
+  <div class="menu-navbar">
     <div class="title">
       <h2 style='font-size: 2em;'><Menu>ERLS: <span style="font-weight: 300; font-style: italic;">Italian Vietnamese Fusion</span></h4>
     </div>
     <div class="tabs">
-      <button id="mains">Mains</button>
+      <button class="mains">Mains</button>
       <button class="soups">Soups</button>
       <button class="sandwiches">Sandwiches</button>
       <button class="drinks">Drinks</button>
       <button class="desserts">Desserts</button>
       <button class="bubble-tea">Bubble Tea </button>
     </div>
-    <div class="main"></div>
-    <div class="soup"></div>
-    <div class="sandwich"></div>
-    <div class="drink"></div>
-    <div class="dessert"></div>
-    <div class="bubbletea"></div>
+  </div>
+  <div class="main menu-category"></div>
+  <div class="soup menu-category"></div>
+  <div class="sandwich menu-category"></div>
+  <div class="drink menu-category"></div>
+  <div class="dessert menu-category"></div>
+  <div class="bubbletea menu-category"></div>
   `;
 
   // Menu categories

@@ -2,16 +2,16 @@
   width: 120em;
 }
 
-/* .title,
-.tabs {
-  position: absolute;
-} */
-
 .title {
   display: flex;
   text-align: center;
   justify-content: center;
+  max-height: 6em;
   width: 100%;
+}
+
+.title h2 {
+  margin: auto 0;
 }
 
 .tabs {
@@ -19,6 +19,7 @@ display: flex;
 height: 3%;
 width: 100%;
 justify-content: center;
+align-items: center;
 }
 
 .tabs button {
@@ -54,22 +55,32 @@ justify-content: center;
   flex-wrap: wrap;
   margin-top: 7.5em;
   margin-left: 8%;
-  background-color: #424e6f;
+  /* background-color: #424e6f; */
+  background-color: #72A101;;
   border: 1px solid rgb(11, 11, 11);
   overflow-y: scroll;
   cursor: pointer;
   font-family:fantasy;
   scroll-behavior: smooth;
+  border-radius: 1em;
 }
 
 .menu div {
-  width: 90%;
   margin: 0 auto;
+}
+
+.menu-navbar {
+  position: fixed;
+  width: 60%
 }
 
 .menu::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+.menu-category {
+  width: 90%;
 }
 
 .single-menu {
@@ -100,6 +111,7 @@ justify-content: center;
 .single-menu h4 span {
   float: right;
   color: #ff7720;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-style: italic;
 }
 
