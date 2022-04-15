@@ -50,6 +50,8 @@ const populateMenu = function(menuItemsArray) {
   const menuDessert = document.querySelector('.dessert');
   const menuBubbleTea = document.querySelector('.bubbletea');
 
+  getCategories();
+
   for (let menuItem of menuItemsArray) {
 
     let singleMenu = document.createElement('div');

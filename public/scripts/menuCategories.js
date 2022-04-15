@@ -1,6 +1,8 @@
-// event listeners for menu category tab clicks
+const getCategories = function () {
 
 $(() => {
+
+// event listeners for menu category tab clicks
 
   $('.mains').on('click', function() {
     const container = $('.menu');
@@ -44,3 +46,4 @@ $(() => {
     container.scrollTop(target);
   });
 });
+}
