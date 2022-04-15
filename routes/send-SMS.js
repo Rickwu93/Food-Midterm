@@ -12,23 +12,21 @@ const client = require('twilio')(accountSid, authToken);
 module.exports = (db) => {
 
   router.post("/", (req, res) => {
-    console.log('send-SMS');
-    db.query(`SELECT * FROM menu_items;`)
-      .then(data => {
-        const SMSmessage = 'Customer';
-          client.messages
-              .create({
-          body: SMSmessage,
-          from: twilioNumber,
-          to: customerNumber
-        })
-        .then(message => console.log(message.sid));
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
+    client.messages
+  .create({
+     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+     from: twilioNumber,
+     to: customerNumber
+   })
+  .then(message => console.log(message.sid));
+
+  client.messages
+  .create({
+     body: 'Restaurant Text',
+     from: twilioNumber,
+     to: customerNumber
+   })
+  .then(message => console.log(message.sid));
   });
   return router;
 };
