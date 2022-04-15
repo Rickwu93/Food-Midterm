@@ -30,8 +30,8 @@ const addToCart = function(menuItemId, menuItemsArray) {
   `;
 
   orderItem.append(qtyCount);
-
   orderItem.append(itemPrice);
+  // orderItem.append(cancelButton);
 
   cartContainer.append(orderItem);
 
