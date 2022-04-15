@@ -10,7 +10,7 @@ const displayLoggedInEmail = function(userInfoObj) {
   loggedInDiv.classList.add('logged-in');
 
   const userEmailDisplay = document.createElement('span');
-  userEmailDisplay.textContent = `Logged in as: ${userInfoObj.email}`;
+  userEmailDisplay.innerHTML = `Logged in as: <span style="color: white">${userInfoObj.email}</span>`;
 
   loggedInDiv.append(userEmailDisplay);
   headerBar.append(loggedInDiv);
