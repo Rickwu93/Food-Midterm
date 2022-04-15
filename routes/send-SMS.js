@@ -7,6 +7,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.AUTH_TOKEN;
 const twilioNumber = process.env.TWILIO_NUMBER;
 const customerNumber = process.env.CUSTOMER_NUMBER;
+const restaurantNumber = process.env.RESTAURANT_NUMBER;
 const client = require('twilio')(accountSid, authToken);
 
 module.exports = (db) => {
@@ -27,9 +28,10 @@ module.exports = (db) => {
   .create({
      body: restaurantMessage,
      from: twilioNumber,
-     to: customerNumber
+     to: restaurantNumber
    })
   .then(message => console.log(message.sid));
   });
+
   return router;
 };
