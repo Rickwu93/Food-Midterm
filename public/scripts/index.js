@@ -34,10 +34,6 @@ cartContainer.addEventListener('DOMNodeRemoved', () => {
   restaurantMessage.value = restaurantSMSMessage();
 });
 
-// cartForm.addEventListener('submit', () => {
-//   console.log('Form submit');
-// });
-
 checkoutBtn.addEventListener('click', () => {
   // Prevent texts from being sent on empty orders
   const orderedItems = document.querySelectorAll('.menu-item_name');
